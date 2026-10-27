@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolso Nobre</title>
+  <meta name="description" content="Em breve: uma nova forma de unir empresários, empreendedores e consumidores que dividem o mesmo sonho de nação.">
+  <meta name="theme-color" content="#c7dd70">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:title" content="Bolso Nobre">
+  <meta property="og:description" content="Em breve: uma nova forma de unir quem produz e quem consome com o mesmo sonho de nação.">
+  <meta property="og:image" content="assets/favicon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fundo: #c7dd70;        /* verde-limão do layout do Bruno */
+      --verde: #479014;        /* verde do BOLSO */
+      --verde-escuro: #2d5f0a; /* verde para títulos (contraste) */
+      --azul: #0355ac;         /* azul do NOBRE */
+      --tinta: #1d2e12;        /* texto corrido */
+      --tinta-suave: #3d5226;  /* texto secundário */
+      --linha: rgba(29, 46, 18, .18);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--fundo);
+      color: var(--tinta);
+      font-family: "Jost", "Century Gothic", "CenturyGothic", "URW Gothic", "Futura", "Segoe UI", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      align-items: center;
+      gap: clamp(2rem, 6vw, 6rem);
+      width: min(1180px, 100% - 3rem);
+      margin: 0 auto;
+      padding: clamp(2.5rem, 7vh, 5rem) 0;
+    }
+
+    .simbolo {
+      display: block;
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      justify-self: end;
+      filter: drop-shadow(0 18px 30px rgba(29, 46, 18, .14));
+    }
+
+    .texto { max-width: 36rem; }
+
+    .wordmark {
+      display: block;
+      width: clamp(220px, 60%, 340px);
+      height: auto;
+      margin: 0 0 2rem;
+    }
+
+    h1 {
+      margin: 0 0 1.1rem;
+      font-weight: 600;
+      font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.15rem);
+      line-height: 1.22;
+      letter-spacing: -0.005em;
+      color: var(--verde-escuro);
+      text-wrap: balance;
+    }
+
+    p { margin: 0 0 1rem; max-width: 60ch; }
+    p:last-of-type { margin-bottom: 0; }
+
+    .contato {
+      margin-top: 2.25rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--linha);
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 2rem;
+      font-size: 1.0625rem;
+      color: var(--tinta-suave);
+    }
+    .contato a {
+      color: var(--azul);
+      font-weight: 500;
+      text-decoration: none;
+      text-underline-offset: .2em;
+      text-decoration-thickness: 1.5px;
+    }
+    .contato a:hover, .contato a:focus-visible { text-decoration: underline; }
+    .contato span { display: block; font-size: .9rem; color: var(--tinta-suave); }
+
+    footer {
+      width: min(1180px, 100% - 3rem);
+      margin: 0 auto;
+      padding: 1.25rem 0 1.5rem;
+      font-size: .9rem;
+      color: var(--tinta-suave);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .4rem 1.5rem;
+    }
+    footer p { margin: 0; }
+
+    :focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; border-radius: 2px; }
+
+    @media (max-width: 760px) {
+      main {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 1.75rem;
+        width: min(100% - 2rem, 560px);
+        padding-top: 2rem;
+      }
+      .simbolo {
+        justify-self: start;
+        max-width: 190px;
+        filter: drop-shadow(0 10px 18px rgba(29, 46, 18, .14));
+      }
+      .wordmark { width: 230px; margin-bottom: 1.5rem; }
+      body { font-size: 1.0625rem; }
+      footer { width: min(100% - 2rem, 560px); }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main > * { animation: chegar .7s ease-out both; }
+      .texto { animation-delay: .15s; }
+      @keyframes chegar {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: none; }
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="simbolo" src="assets/simbolo-orig.webp" width="1096" height="1484" alt="" fetchpriority="high">
+
+    <div class="texto">
+      <img class="wordmark" src="assets/wordmark.png" width="1473" height="800" alt="Bolso Nobre">
+
+      <h1>Em breve, uma nova forma de unir empresários e empreendedores que dividem o mesmo sonho de nação.</h1>
+
+      <p>Aqui, os valores vão muito além do preço. O crescimento real de uma nação está nas mãos de quem se arrisca, produz e gera trabalho e renda.</p>
+      <p>Consumidores que comungam desse pensamento poderão adquirir produtos e serviços de pessoas que querem construir uma nação forte.</p>
+
+      <div class="contato">
+        <div>
+          <span>Fale com a gente</span>
+          <a href="mailto:contato@bolsonobre.com.br">contato@bolsonobre.com.br</a>
+        </div>
+        <div>
+          <span>Acompanhe</span>
+          <a href="https://www.instagram.com/bolsonobre.oficial" rel="noopener">@bolsonobre.oficial</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Bolso Nobre™, 2026.</p>
+    <p>Esta página não usa cookies nem coleta dados.</p>
+  </footer>
+</body>
+</html>
